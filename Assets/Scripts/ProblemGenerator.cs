@@ -18,10 +18,10 @@ public class ProblemGenerator : MonoBehaviour
     private float _behaviorTime;
     void Start()
     {
-        
+
     }
 
-    public static void NewPoblemSolution (BabyProblem newSolution)
+    public static void NewPoblemSolution(BabyProblem newSolution)
     {
         ProblemGenerator.Instance.ChosenSolution = newSolution;
 
@@ -48,18 +48,21 @@ public class ProblemGenerator : MonoBehaviour
     }
     void Update()
     {
+        print(ChosenSolution);
         if (GameManager.Instance.State == GameManager.GameState.PlayGame) return;
 
-          if(CurrentProblem == BabyProblem.None) ProblemGenerating();
+        if (CurrentProblem == BabyProblem.None) ProblemGenerating();
         else
         {
-            if (Time.time >= _behaviorTime) { ProblemGenerating();
-                print(-1);
+            if (Time.time >= _behaviorTime)
+            {
+                ProblemGenerating();
+
             }// +mistake counter 
             else ProblemComparison();
 
         }
-      
+
     }
 
     public enum BabyProblem
