@@ -5,13 +5,14 @@ using UnityEngine;
 public abstract class HosingAction : MonoBehaviour
 {
 
-    protected virtual void ButtonAction(ProblemGenerator.BabyProblem solution)
+    protected virtual void ButtonAction(BabyProblems.BabyProblem solution)
     {
-        ProblemGenerator.Instance.ChosenSolution = solution;
+        ProblemCheck.Instance.NewPoblemSolution(solution);
+        print("clicked");
 
     } 
 
-    protected virtual void IsItClickedCheck(float Xpos, float Ypos, Vector3 size, ProblemGenerator.BabyProblem problem)
+    protected virtual void IsItClickedCheck(float Xpos, float Ypos, Vector3 size, BabyProblems.BabyProblem problem)
     {
         if(Helpers.IsMouseInObjectPosition(Xpos, Ypos, MouseController.Instance.CamPos, size))
         ButtonAction(problem);

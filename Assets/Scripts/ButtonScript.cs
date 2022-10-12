@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ButtonScript : HosingAction
 {
-    [SerializeField] private ProblemGenerator.BabyProblem ButtonSolution;
+    [SerializeField] private BabyProblems.BabyProblem ButtonSolution;
     public int TimeToHoldButton = 3;
     public  bool ButtonPressed = false;
     private Vector3 _size;
