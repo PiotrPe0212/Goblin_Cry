@@ -18,6 +18,6 @@ public class GeneratingGoblinFace : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

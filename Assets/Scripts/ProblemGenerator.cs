@@ -30,7 +30,7 @@ public class ProblemGenerator : MonoBehaviour
         if (GameManager.Instance.State == GameManager.GameState.PlayGame) return;
 
         if (CurrentProblem == BabyProblems.BabyProblem.None) ProblemGenerating();
-   
+
     }
 
     public void ProblemReset()
@@ -38,5 +38,5 @@ public class ProblemGenerator : MonoBehaviour
         CurrentProblem = BabyProblems.BabyProblem.None;
     }
 
-    
+
 }

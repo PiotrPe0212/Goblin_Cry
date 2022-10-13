@@ -19,10 +19,11 @@ public class PlaneController : MonoBehaviour
 
     private void PlaneHandler(GameManager.GameState currentState)
     {
-        switch (currentState){
+        switch (currentState)
+        {
             case GameManager.GameState.MainMenu:
                 MenuPlane.SetActive(true);
-            break;
+                break;
             case GameManager.GameState.PlayGame:
                 MenuPlane.SetActive(false);
                 GamePlane.SetActive(true);
@@ -31,12 +32,12 @@ public class PlaneController : MonoBehaviour
                 GamePlane.SetActive(false);
                 LosePlane.SetActive(true);
                 break;
-           default:
+            default:
                 throw new System.ArgumentOutOfRangeException(nameof(currentState), currentState, "Wrong argument!");
         }
-            
+
 
 
     }
-    
+
 }

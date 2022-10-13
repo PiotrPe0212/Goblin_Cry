@@ -6,13 +6,13 @@ public class ButtonScript : HosingAction
 {
     [SerializeField] private BabyProblems.BabyProblem ButtonSolution;
     public int TimeToHoldButton = 3;
-    public  bool ButtonPressed = false;
+    public bool ButtonPressed = false;
     private Vector3 _size;
     private float _loadingTime;
 
     void Start()
     {
-     
+
         SpriteRenderer rend = gameObject.GetComponent<SpriteRenderer>();
         _size = rend.bounds.size;
 
@@ -31,7 +31,7 @@ public class ButtonScript : HosingAction
         IsItClickedCheck(transform.position.x, transform.position.y, _size, ButtonSolution);
 
     }
-    
+
 
     private void LoadTimer(int delay)
     {

@@ -6,12 +6,12 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public GameState State;
-    public static event System.Action<GameState> OnStateChange; 
-  
+    public static event System.Action<GameState> OnStateChange;
+
     private void Awake()
     {
-        Instance = this; 
-        
+        Instance = this;
+
     }
     void Start()
     {
@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     public void GameStateUpdate(GameState newState)
     {
         State = newState;
-        OnStateChange?.Invoke(newState); 
+        OnStateChange?.Invoke(newState);
     }
 
     public enum GameState

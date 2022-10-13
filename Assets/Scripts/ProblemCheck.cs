@@ -21,7 +21,7 @@ public class ProblemCheck : MonoBehaviour
 
     public BabyProblems.BabyProblem ChosenSolution;
 
-    public  void NewPoblemSolution(BabyProblems.BabyProblem newSolution)
+    public void NewPoblemSolution(BabyProblems.BabyProblem newSolution)
     {
         ProblemCheck.Instance.ChosenSolution = newSolution;
         print(newSolution);
@@ -32,7 +32,7 @@ public class ProblemCheck : MonoBehaviour
     {
         if (ProblemGenerator.Instance.CurrentProblem != ChosenSolution) return;
         ProblemGenerator.Instance.ProblemReset();
-        //addingPoiunt calling
+        ScoreController.Instance.ScoreChange();
     }
 
     private void Update()
@@ -45,7 +45,7 @@ public class ProblemCheck : MonoBehaviour
 
     private void TimerForCry(int delay)
     {
-       _currentTime = Time.time + delay;
+        _currentTime = Time.time + delay;
     }
 
     private void NeedNotFulfilled()
@@ -56,7 +56,7 @@ public class ProblemCheck : MonoBehaviour
 
     private void TimerStart(GameManager.GameState currentState)
     {
-        if( currentState == GameManager.GameState.PlayGame)
-        TimerForCry(TimeToCry);
+        if (currentState == GameManager.GameState.PlayGame)
+            TimerForCry(TimeToCry);
     }
 }

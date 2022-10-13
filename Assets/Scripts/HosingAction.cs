@@ -10,11 +10,11 @@ public abstract class HosingAction : MonoBehaviour
         ProblemCheck.Instance.NewPoblemSolution(solution);
         print("clicked");
 
-    } 
+    }
 
     protected virtual void IsItClickedCheck(float Xpos, float Ypos, Vector3 size, BabyProblems.BabyProblem problem)
     {
-        if(Helpers.IsMouseInObjectPosition(Xpos, Ypos, MouseController.Instance.CamPos, size))
-        ButtonAction(problem);
+        if (Helpers.IsMouseInObjectPosition(Xpos, Ypos, MouseController.Instance.CamPos, size))
+            ButtonAction(problem);
     }
 }
